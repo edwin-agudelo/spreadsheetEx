@@ -5,6 +5,11 @@
 class SpreadSheetCell
 {
 public:
+	SpreadSheetCell();
+	SpreadSheetCell(double initialValue);
+	SpreadSheetCell(const std::string& initialValue);
+	SpreadSheetCell(const SpreadSheetCell& src);
+	SpreadSheetCell& operator=(const SpreadSheetCell& rhs);
 	void setValue(double inValue);
 	double getValue() const;
 	void setString(const std::string& inString);

@@ -38,3 +38,26 @@ string SpreadSheetCell::doubleToString(double  inValue) const {
 	return ostr.str();
 }
 
+SpreadSheetCell::SpreadSheetCell(double initialValue) {
+	setValue(initialValue);
+}
+
+SpreadSheetCell::SpreadSheetCell(const std::string& initialValue) {
+	setString(initialValue);
+}
+
+SpreadSheetCell::SpreadSheetCell() {
+	setValue(0);
+}
+
+SpreadSheetCell::SpreadSheetCell(const SpreadSheetCell& src) : mValue(src.mValue), mString(src.mString) {
+}
+
+SpreadSheetCell& SpreadSheetCell::operator=(const SpreadSheetCell& rhs) {
+	if (this == &rhs) {
+		return *this;
+	}
+	mValue = rhs.mValue;
+	mString = rhs.mString;
+	return *this;
+}
