@@ -153,9 +153,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="principal.cpp" />
+    <ClCompile Include="SpreadSheet.cpp" />
     <ClCompile Include="SpreadSheetCell.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="SpreadSheet.h" />
     <ClInclude Include="SpreadSheetCell.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

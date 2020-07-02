@@ -14,10 +14,13 @@ public:
 	double getValue() const;
 	void setString(const std::string& inString);
 	const std::string& getString() const;
+	void set(double inValue);
+	void set(std::string& inString);
 private:
-	std::string doubleToString(double inValue) const;
-	double stringToDouble(const std::string& inString) const;
+	static std::string doubleToString(double inValue) ;
+	static double stringToDouble(const std::string& inString) ;
 	double mValue;
 	std::string mString;
+	mutable int mNumAccess = 0;
 };
 
