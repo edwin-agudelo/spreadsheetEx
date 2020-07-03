@@ -101,3 +101,7 @@ void SpreadSheet::copyFrom(const SpreadSheet& src) {
 int SpreadSheet::getId() {
 	return mId;
 }
+
+void SpreadSheetCell::setColor(Colors color) {
+	mColor = color;
+}
