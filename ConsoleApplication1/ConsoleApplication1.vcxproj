@@ -152,13 +152,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DoubleSpreadSheetCell.cpp" />
     <ClCompile Include="principal.cpp" />
     <ClCompile Include="SpreadSheet.cpp" />
     <ClCompile Include="SpreadSheetCell.cpp" />
+    <ClCompile Include="StringSpreadSheetCell.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DoubleSpreadSheetCell.h" />
     <ClInclude Include="SpreadSheet.h" />
     <ClInclude Include="SpreadSheetCell.h" />
+    <ClInclude Include="StringSpreadSheetCell.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
