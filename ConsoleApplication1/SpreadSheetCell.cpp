@@ -4,7 +4,8 @@
 
 using namespace std;
 
-void SpreadSheetCell::setValue(double inValue) {
+// Se comenta por cambio de capitulo
+/*void SpreadSheetCell::setValue(double inValue) {
 	mValue = inValue;
 	mString = doubleToString(inValue);
 }
@@ -106,3 +107,8 @@ SpreadSheetCell& SpreadSheetCell::operator/=(const SpreadSheetCell& rhs) {
 	set(mValue + rhs.mValue);
 	return *this;
 }
+*/
+
+// Nuevo constructor para manejar herencia
+SpreadSheetCell::SpreadSheetCell() { }
+SpreadSheetCell::~SpreadSheetCell() { }

@@ -2,10 +2,33 @@
 //
 
 #include <iostream>
+#include <vector>
+#include <memory>
+// Includes propios
+#include "SpreadSheetCell.h"
+#include "StringSpreadSheetCell.h"
+#include "DoubleSpreadSheetCell.h"
+
+using namespace std;
 
 int main()
 {
     std::cout << "Hello World!\n";
+
+    vector< unique_ptr<SpreadSheetCell> > cellArray;
+    cellArray.push_back(make_unique<StringSpreadSheetCell>());
+    cellArray.push_back(make_unique<StringSpreadSheetCell>());
+    cellArray.push_back(make_unique<DoubleSpreadSheetCell>());
+
+    string strtmp = "Hola";
+
+    cellArray[0]->set(strtmp);
+    strtmp = "10";
+    cellArray[1]->set(strtmp);
+    strtmp = "18";
+    cellArray[2]->set(strtmp);
+
+    cout << "Los valores de las celdas son:" << cellArray[0]->getString() << " , " << cellArray[1]->getString() << " , " << cellArray[2]->getString() << endl;
 }
 
 // Ejecutar programa: Ctrl + F5 o menú Depurar > Iniciar sin depurar
