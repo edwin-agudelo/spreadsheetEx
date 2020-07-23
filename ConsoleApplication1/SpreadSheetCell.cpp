@@ -4,8 +4,7 @@
 
 using namespace std;
 
-// Se comenta por cambio de capitulo
-/*void SpreadSheetCell::setValue(double inValue) {
+void SpreadSheetCell::setValue(double inValue) {
 	mValue = inValue;
 	mString = doubleToString(inValue);
 }
@@ -72,43 +71,3 @@ void SpreadSheetCell::set(double inValue) {
 void SpreadSheetCell::set(std::string& inString) {
 	setString(inString);
 }
-
-SpreadSheetCell SpreadSheetCell::add(const SpreadSheetCell& cell) const{
-	SpreadSheetCell newCell;
-	newCell.set(mValue + cell.mValue);
-	return newCell;
-}
-
-SpreadSheetCell SpreadSheetCell::operator+(const SpreadSheetCell& cell) const {
-	SpreadSheetCell newCell;
-	newCell.set(mValue + cell.mValue);
-	return newCell;
-}
-
-SpreadSheetCell& SpreadSheetCell::operator+=(const SpreadSheetCell& rhs) {
-	set(mValue + rhs.mValue);
-	return *this;
-}
-
-SpreadSheetCell& SpreadSheetCell::operator-=(const SpreadSheetCell& rhs) {
-	set(mValue - rhs.mValue);
-	return *this;
-}
-
-SpreadSheetCell& SpreadSheetCell::operator*=(const SpreadSheetCell& rhs) {
-	set(mValue * rhs.mValue);
-	return *this;
-}
-
-SpreadSheetCell& SpreadSheetCell::operator/=(const SpreadSheetCell& rhs) {
-	if (rhs.mValue == 0) {
-		throw invalid_argument("Divided by zero");
-	}
-	set(mValue + rhs.mValue);
-	return *this;
-}
-*/
-
-// Nuevo constructor para manejar herencia
-SpreadSheetCell::SpreadSheetCell() { }
-SpreadSheetCell::~SpreadSheetCell() { }
