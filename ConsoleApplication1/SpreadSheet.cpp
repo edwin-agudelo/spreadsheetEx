@@ -1,8 +1,8 @@
 #include "SpreadSheet.h"
 
-int SpreadSheet::sCounter;
+//int SpreadSheet::sCounter;
 
-SpreadSheet::SpreadSheet(const SpreadSheetApplication& theApp, int inWidth, int inHeigh) :
+/*SpreadSheet::SpreadSheet(const SpreadSheetApplication& theApp, int inWidth, int inHeigh) :
 	mWidth(inWidth < kMaxWidth ? inWidth : kMaxWidth), 
 	mHeight(inHeigh < kMaxHeight ? inHeigh : kMaxHeight),
 	mTheApp(theApp){
@@ -50,7 +50,7 @@ SpreadSheet::SpreadSheet(const SpreadSheet& src) : mTheApp(src.mTheApp) {
 	}
 	for (int i = 0; i < mWidth; i++)
 		for (int j = 0; j < mHeight; j++)
-			mCells[i][j] = src.mCells[i][j];*/
+			mCells[i][j] = src.mCells[i][j];*//*
 
 	// Esto es una mejora
 	mId = sCounter++;
@@ -78,7 +78,7 @@ SpreadSheet& SpreadSheet::operator=(const SpreadSheet& rhs) {
 	}
 	for (int i = 0; i < mWidth; i++)
 		for (int j = 0; j < mHeight; j++)
-			mCells[i][j] = rhs.mCells[i][j];*/
+			mCells[i][j] = rhs.mCells[i][j];*/ /*
 	copyFrom(rhs);
 
 	return *this;
@@ -101,3 +101,11 @@ void SpreadSheet::copyFrom(const SpreadSheet& src) {
 int SpreadSheet::getId() {
 	return mId;
 }
+<<<<<<< HEAD
+=======
+
+void SpreadSheetCell::setColor(Colors color) {
+	mColor = color;
+}
+*/
+>>>>>>> 3a45af060e26a3913d14c9eada27da59d82f2c4d
